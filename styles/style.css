@@ -2,6 +2,8 @@
 
 :root {
   --dark-green: rgba(13, 32, 25, 1);
+  --green: #122d24;
+  --light-green: #122d2430;
 }
 
 /* general css */
@@ -22,11 +24,6 @@
 }
 
 /* ---------- */
-
-.main-page {
-  flex: 1;
-}
-
 .main-header {
   background-color: var(--dark-green);
   padding: 20px 110px;
@@ -49,7 +46,70 @@
 .header-logos > a:nth-child(2) > img {
   margin-left: 24px;
 }
+/********************/
+/********************/
+/********************/
+.main-page {
+  flex: 1;
+  background-color: var(--green);
+}
+.main-page-wrapper {
+  max-width: 1680px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 35px 0;
+  position: relative;
+}
+.mainText-container {
+  width: 650px;
+  height: 400px;
+  padding: 40px;
+  margin-top: 20px;
+  border-radius: 9px;
+  background-color: #49796b;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.mainText-container h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.mainText-container p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.5;
+}
+.background-img {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: 6%;
+  bottom: -55%;
+  transform: translate(10%, -83%);
+}
+.robot-img {
+  position: absolute;
+  width: 230px;
+  height: 350px;
+  right: 20%;
+  top: 50%;
+  transform: translate(73%, -50%);
+}
+.book-img {
+  position: absolute;
+  width: 150px;
+  height: 55px;
+  right: 30%;
+  bottom: 20%;
+  transform: translate(90%, 50%);
+}
 
+/******************/
+/******************/
+/******************/
 .main-footer {
   background-color: var(--dark-green);
   padding: 40px 110px;
