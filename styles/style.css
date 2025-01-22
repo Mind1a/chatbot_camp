@@ -4,6 +4,8 @@
   --dark-green: rgba(13, 32, 25, 1);
   --green: #122d24;
   --light-green: #122d2430;
+  --transparent-green: rgba(255, 255, 255, 0.10);
+  --white: #ffffff;
 }
 
 /* general css */
@@ -23,7 +25,7 @@
   font-family: "Noto Sans Georgian";
 }
 
-/* ---------- */
+/*header start*/
 .main-header {
   background-color: var(--dark-green);
   padding: 20px 110px;
@@ -38,7 +40,7 @@
 
 .header-components a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
   font-size: 20px;
 }
@@ -46,62 +48,69 @@
 .header-logos > a:nth-child(2) > img {
   margin-left: 24px;
 }
-/********************/
-/********************/
-/********************/
+/*header end*/
+
+/* hero section start */
 .main-page {
   flex: 1;
   background-color: var(--green);
+  padding: 0 110px;
 }
 .main-page-wrapper {
   max-width: 1680px;
   width: 100%;
   margin: 0 auto;
-  padding: 35px 0;
+  padding: 80px 0;
   position: relative;
 }
 .main-text-container {
-  width: 650px;
-  height: 400px;
-  padding: 40px;
-  margin-top: 20px;
-  border-radius: 9px;
-  background-color: #49796b;
+  max-width: 838px;
+  height: auto;
+  padding: 40px 0 40px 40px;
+  border-radius: 30px;
+  background-color: var(--transparent-green);
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 .main-text-container h2 {
   font-size: 20px;
-  color: #fff;
-  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
 }
 .main-text-container p {
-  font-size: 14px;
-  color: #fff;
-  line-height: 1.5;
+  font-size: 16px;
+  color: var(--white);
+  line-height: normal;
   letter-spacing: 0.5;
 }
-.background-img {
+.introduction span{
+  display: block;
+}
+.about-chatbot span{
+  display: block;
+  max-width: 80ch;
+}
+.img-container{
   position: absolute;
-  width: 450px;
-  height: 450px;
-  right: 6%;
-  bottom: -55%;
-  transform: translate(10%, -83%);
+  top: 80px;
+  right: 0;
+}
+.elipse-img {
+  position: relative;
+  width: 494px;
+  height: 494px;
 }
 .robot-img {
   position: absolute;
-  width: 230px;
-  height: 350px;
-  right: 20%;
-  top: 50%;
-  transform: translate(73%, -50%);
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
+/* hero section end */
 
-/******************/
-/******************/
-/******************/
+/* footer start */
 .main-footer {
   background-color: var(--dark-green);
   padding: 40px 110px;
@@ -113,7 +122,7 @@
   align-items: center;
   justify-content: space-between;
 
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
   font-size: 20px;
 }
@@ -139,7 +148,7 @@
 
 .footer-contacts-section a {
   text-decoration: none;
-  color: #fff;
-
+  color: var(--white);
   margin-left: 8px;
 }
+/* footer end */
