@@ -6,6 +6,7 @@
   --light-green: #122d2430;
   --transparent-green: rgba(255, 255, 255, 0.10);
   --white: #ffffff;
+  --black: #000000;
 }
 
 /* general css */
@@ -60,18 +61,20 @@
   max-width: 1680px;
   width: 100%;
   margin: 0 auto;
-  padding: 80px 0;
+  padding-top: 80px;
   position: relative;
 }
 .main-text-container {
-  max-width: 838px;
+  max-width: 758px;
+  width: 100%;
   height: auto;
-  padding: 40px 0 40px 40px;
+  padding: 40px;
   border-radius: 30px;
   background-color: var(--transparent-green);
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 34px;
+  z-index: 20;
 }
 .main-text-container h2 {
   font-size: 20px;
@@ -82,8 +85,10 @@
 .main-text-container p {
   font-size: 16px;
   color: var(--white);
+  font-weight: 400;
   line-height: normal;
   letter-spacing: 0.5;
+  line-height: 1.5;
 }
 .introduction span{
   display: block;
@@ -91,6 +96,12 @@
 .about-chatbot span{
   display: block;
   max-width: 80ch;
+}
+.camp-img{
+  position: absolute;
+  top: 12%;
+  right: 20%;
+  z-index: 10;
 }
 .img-container{
   position: absolute;
@@ -107,6 +118,63 @@
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%);
+}
+.chat-functions{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.start-chat-btn{
+  width: 263px;
+  height: 64px;
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.message-btn{
+  height: 60px;
+  width: 60px;
+  background-color: var(--white);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.about-project{
+  max-width: 1680px;
+  margin: 80px 0 172px;
+  height: auto;
+  padding: 40px;
+  border-radius: 30px;
+  background-color: var(--transparent-green);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.about-project h2{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.about-project p{
+  max-width: 150ch;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.5;
+  line-height: 1.5;
+}
+.chatbot-description span{
+  display: block;
 }
 /* hero section end */
 
