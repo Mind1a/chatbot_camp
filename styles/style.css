@@ -4,6 +4,9 @@
   --dark-green: rgba(13, 32, 25, 1);
   --green: #122d24;
   --light-green: #122d2430;
+  --transparent-green: rgba(255, 255, 255, 0.10);
+  --white: #ffffff;
+  --black: #000000;
 }
 
 /* general css */
@@ -23,7 +26,7 @@
   font-family: "Noto Sans Georgian";
 }
 
-/* ---------- */
+/*header start*/
 .main-header {
   background-color: var(--dark-green);
   padding: 20px 110px;
@@ -38,7 +41,7 @@
 
 .header-components a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
   font-size: 20px;
 }
@@ -46,62 +49,136 @@
 .header-logos > a:nth-child(2) > img {
   margin-left: 24px;
 }
-/********************/
-/********************/
-/********************/
+/*header end*/
+
+/* hero section start */
 .main-page {
   flex: 1;
   background-color: var(--green);
+  padding: 0 110px;
 }
 .main-page-wrapper {
   max-width: 1680px;
   width: 100%;
   margin: 0 auto;
-  padding: 35px 0;
+  padding-top: 80px;
   position: relative;
 }
 .main-text-container {
-  width: 650px;
-  height: 400px;
+  max-width: 758px;
+  width: 100%;
+  height: auto;
   padding: 40px;
-  margin-top: 20px;
-  border-radius: 9px;
-  background-color: #49796b;
+  border-radius: 30px;
+  background-color: var(--transparent-green);
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 34px;
+  z-index: 20;
 }
 .main-text-container h2 {
   font-size: 20px;
-  color: #fff;
-  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
 }
 .main-text-container p {
-  font-size: 14px;
-  color: #fff;
-  line-height: 1.5;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 400;
+  line-height: normal;
   letter-spacing: 0.5;
+  line-height: 1.5;
 }
-.background-img {
+.introduction span{
+  display: block;
+}
+.about-chatbot span{
+  display: block;
+  max-width: 80ch;
+}
+.camp-img{
   position: absolute;
-  width: 450px;
-  height: 450px;
-  right: 6%;
-  bottom: -55%;
-  transform: translate(10%, -83%);
+  top: 12%;
+  right: 20%;
+  z-index: 10;
+}
+.img-container{
+  position: absolute;
+  top: 80px;
+  right: 0;
+}
+.elipse-img {
+  position: relative;
+  width: 494px;
+  height: 494px;
 }
 .robot-img {
   position: absolute;
-  width: 230px;
-  height: 350px;
-  right: 20%;
-  top: 50%;
-  transform: translate(73%, -50%);
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
+.chat-functions{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.start-chat-btn{
+  width: 263px;
+  height: 64px;
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.message-btn{
+  height: 60px;
+  width: 60px;
+  background-color: var(--white);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.about-project{
+  max-width: 1680px;
+  margin: 80px 0 172px;
+  height: auto;
+  padding: 40px;
+  border-radius: 30px;
+  background-color: var(--transparent-green);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.about-project h2{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.about-project p{
+  max-width: 150ch;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.5;
+  line-height: 1.5;
+}
+.chatbot-description span{
+  display: block;
+}
+/* hero section end */
 
-/******************/
-/******************/
-/******************/
+/* footer start */
 .main-footer {
   background-color: var(--dark-green);
   padding: 40px 110px;
@@ -113,7 +190,7 @@
   align-items: center;
   justify-content: space-between;
 
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
   font-size: 20px;
 }
@@ -139,7 +216,7 @@
 
 .footer-contacts-section a {
   text-decoration: none;
-  color: #fff;
-
+  color: var(--white);
   margin-left: 8px;
 }
+/* footer end */
