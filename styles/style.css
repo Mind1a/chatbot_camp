@@ -4,7 +4,7 @@
   --dark-green: rgba(13, 32, 25, 1);
   --green: #122d24;
   --light-green: #122d2430;
-  --transparent-green: rgba(255, 255, 255, 0.10);
+  --transparent-green: rgba(255, 255, 255, 0.1);
   --white: #ffffff;
   --black: #000000;
 }
@@ -46,8 +46,11 @@
   font-size: 20px;
 }
 
-.header-logos > a:nth-child(2) > img {
-  margin-left: 24px;
+.header-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
 /*header end*/
 
@@ -90,20 +93,20 @@
   letter-spacing: 0.5;
   line-height: 1.5;
 }
-.introduction span{
+.introduction span {
   display: block;
 }
-.about-chatbot span{
+.about-chatbot span {
   display: block;
   max-width: 80ch;
 }
-.camp-img{
+.camp-img {
   position: absolute;
   top: 12%;
   right: 20%;
   z-index: 10;
 }
-.img-container{
+.img-container {
   position: absolute;
   top: 80px;
   right: 0;
@@ -115,16 +118,16 @@
 }
 .robot-img {
   position: absolute;
-  top: 50%; 
-  left: 50%; 
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
-.chat-functions{
+.chat-functions {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
 }
-.start-chat-btn{
+.start-chat-btn {
   width: 263px;
   height: 64px;
   background-color: var(--white);
@@ -137,7 +140,7 @@
   font-weight: 500;
   cursor: pointer;
 }
-.message-btn{
+.message-btn {
   height: 60px;
   width: 60px;
   background-color: var(--white);
@@ -147,7 +150,7 @@
   align-items: center;
   cursor: pointer;
 }
-.about-project{
+.about-project {
   max-width: 1680px;
   margin: 80px 0 172px;
   height: auto;
@@ -158,13 +161,13 @@
   flex-direction: column;
   gap: 8px;
 }
-.about-project h2{
+.about-project h2 {
   font-size: 20px;
   font-weight: 600;
   color: var(--white);
   margin-bottom: 8px;
 }
-.about-project p{
+.about-project p {
   max-width: 150ch;
   font-size: 16px;
   color: var(--white);
@@ -173,7 +176,7 @@
   letter-spacing: 0.5;
   line-height: 1.5;
 }
-.chatbot-description span{
+.chatbot-description span {
   display: block;
 }
 /* hero section end */
@@ -200,23 +203,44 @@
   height: 80px;
 }
 
+.footer-contacts-section {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
 .footer-contacts-section h2 {
   font-size: 20px;
   font-weight: 500;
-
-  margin-bottom: 16px;
 }
 
 .footer-contacts-section ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 13px;
+}
+
+.footer-contacts-section li {
+  display: flex;
   gap: 8px;
 }
 
-.footer-contacts-section a {
+.footer-contacts-section li a:last-child {
   text-decoration: none;
-  color: var(--white);
-  margin-left: 8px;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
 }
+
+.icon-wrapper {
+  height: 24px;
+  width: 24px;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 /* footer end */
