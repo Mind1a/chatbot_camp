@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  font-family: sans-serif;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-variant: tabular-nums;
+}
+html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(13, 32, 25);
+  padding: 20px 110px;
+}
+.header .header-components {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-components .header-logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.header .header-components .header-logos a {
+  position: relative;
+}
+.header .header-components .header-logos a::before {
+  content: "";
+  position: absolute;
+  height: 2.5px;
+  width: 0;
+  background-color: rgb(36, 227, 36);
+  transition: 0.7s ease;
+}
+.header .header-components .header-logos a:before {
+  left: 0;
+  bottom: -10px;
+}
+.header .header-components .header-logos a:hover::before {
+  width: 100%;
+}
+.header .header-components .navigation a {
+  position: relative;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.header .header-components .navigation a:before,
+.header .header-components .navigation a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: rgb(36, 227, 36);
+  transition: 0.7s ease;
+}
+.header .header-components .navigation a:after {
+  left: 0;
+  bottom: -10px;
+}
+.header .header-components .navigation a:before {
+  right: 0;
+  top: -10px;
+}
+.header .header-components .navigation a:hover {
+  color: rgb(231, 25, 25);
+}
+.header .header-components .navigation a:hover:after,
+.header .header-components .navigation a:hover:before {
+  width: 100%;
+}
+
+.footer {
+  padding: 48px 110px;
+  width: 100%;
+  height: 194px;
+  background-color: rgb(13, 32, 25);
+  display: flex;
+  align-items: center;
+}
+.footer .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .container #footer-unilab-logo {
+  width: 61.41px;
+  height: 80px;
+}
+.footer section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: white;
+}
+.footer section h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+}
+.footer section ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer section ul li img {
+  width: 24px;
+  height: 24px;
+}
+.footer section ul li a {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.5s ease;
+}
+.footer section ul li a:hover {
+  color: rgb(36, 227, 36);
+}
+
+.main-page {
+  background-color: #122d24;
+  color: white;
+  padding: 180px 110px;
+}
+.main-page .hero-section {
+  display: flex;
+  justify-content: space-between;
+}
+.main-page .hero-section .main-text-container {
+  width: 718px;
+  height: auto;
+  padding: 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.main-page .hero-section .main-text-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+.main-page .hero-section .main-text-container p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5;
+  line-height: 1.5;
+}
+.main-page .hero-section .main-text-container p span {
+  display: block;
+}
+.main-page .hero-section .camp-img {
+  margin-block-start: auto;
+  width: 481px;
+  height: 359px;
+  z-index: 0;
+}
+.main-page .hero-section .img-container {
+  width: 494px;
+  height: 494px;
+  border-radius: 50%;
+  background-color: #0D2019;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-page .chat-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+.main-page .chat-section .start-chat-btn {
+  width: 263px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.main-page .chat-section .start-chat-btn:hover {
+  background-color: rgb(36, 227, 36);
+  color: black;
+  box-shadow: 0 0 50px rgb(36, 227, 36);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+}
+.main-page .chat-section .chatbox-container #chatbotIframe {
+  width: 370px;
+  height: 480px;
+  position: absolute;
+  bottom: -25px;
+  right: 72px;
+  display: none;
+}
+.main-page .chat-section .message-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.8s ease;
+  overflow: hidden;
+}
+.main-page .chat-section .message-btn:hover {
+  background-color: rgb(36, 227, 36);
+  color: black;
+  box-shadow: 0 0 50px rgb(36, 227, 36);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+}
+.main-page .chat-section .red:hover {
+  background-color: rgb(231, 25, 25);
+  color: black;
+  box-shadow: 0 0 50px rgb(231, 25, 25);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+}
+.main-page .about-section {
+  width: 100%;
+  height: auto;
+  margin: 92px 0 154px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+}
+.main-page .about-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+.main-page .about-section p {
+  max-width: 1368px;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5;
+  line-height: 1.5;
+}
+.main-page .about-section p span {
+  display: block;
+}/*# sourceMappingURL=global.css.map */

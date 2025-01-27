@@ -1,0 +1,71 @@
+@import "../utils/variables";
+.header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    background-color: $header-color;
+    padding: 20px 110px;
+    
+    .header-components{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-logos{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .header-logos a{
+            position: relative;
+        }
+        .header-logos a::before{
+            content: "";
+            position: absolute;
+            height: 2.5px;
+            width: 0;
+            background-color: rgb(36, 227, 36);
+            transition: .7s ease;
+        }
+        .header-logos a:before{
+            left: 0;
+            bottom: -10px;
+        }
+        .header-logos a:hover::before{
+            width: 100%;
+        }
+
+        .navigation a{
+            position: relative;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .navigation a:before,
+        .navigation a:after{
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 0;
+            background-color: rgb(36, 227, 36);
+            transition: .7s ease;
+        }
+
+        .navigation a:after{
+            left: 0;
+            bottom: -10px;
+        }
+        .navigation a:before{
+            right: 0;
+            top: -10px;
+        }
+        .navigation a:hover{
+            color: rgb(231, 25, 25);
+        }
+        .navigation a:hover:after,
+        .navigation a:hover:before{
+            width: 100%;
+        }
+    }
+}
