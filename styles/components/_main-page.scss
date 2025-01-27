@@ -7,8 +7,6 @@
     .hero-section{
         display: flex;
         justify-content: space-between;
-        
-
         .main-text-container{
             width: 718px;
             height: auto;
@@ -75,16 +73,6 @@
             font-size: 18px;
             font-weight: 500;
             cursor: pointer;
-
-            transition: .5s;
-            overflow: hidden;
-        }
-
-        .start-chat-btn:hover{
-            background-color: rgb(36, 227, 36);
-            color: black;
-            box-shadow: 0 0 50px rgb(36, 227, 36);
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
         }
 
         .chatbox-container{
@@ -108,23 +96,6 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-
-            transition: .8s ease;
-            overflow: hidden;
-        }
-
-        .message-btn:hover{
-            background-color: rgb(36, 227, 36);
-            color: black;
-            box-shadow: 0 0 50px rgb(36, 227, 36);
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        }
-
-        .red:hover{
-            background-color: rgb(231, 25, 25);
-            color: black;
-            box-shadow: 0 0 50px rgb(231, 25, 25);
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
         }
     } 
 
@@ -189,7 +160,6 @@
             }
             position: relative;
             .camp-img{
-                margin-block-start: auto;
                 width: 300px;
                 height: 259px;
                 position: absolute;
@@ -218,7 +188,6 @@
                 width: 550px;
             }
             .camp-img{
-                margin-block-start: auto;
                 width: 250px;
                 height: 219px;
                 position: absolute;
@@ -299,16 +268,8 @@
         }
     
         .chat-section{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-top: 40px;
-            position: relative;
-    
             .start-chat-btn{
                 width: 100%;
-                border-radius: 20px;
             }
             .chatbox-container{
                 #chatbotIframe{
@@ -374,16 +335,8 @@
         }
     
         .chat-section{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-top: 40px;
-            position: relative;
-    
             .start-chat-btn{
                 width: 100%;
-                border-radius: 20px;
             }
             .chatbox-container{
                 #chatbotIframe{
@@ -449,16 +402,8 @@
         }
     
         .chat-section{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-top: 40px;
-            position: relative;
-    
             .start-chat-btn{
                 width: 100%;
-                border-radius: 20px;
             }
             .chatbox-container{
                 #chatbotIframe{
