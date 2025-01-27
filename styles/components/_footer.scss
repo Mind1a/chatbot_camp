@@ -1,0 +1,90 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+.footer{
+    padding: 48px 110px;
+    width: 100%;
+    height: 194px;
+    background-color: $header-color;
+    display: flex;
+    align-items: center;
+
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        #footer-unilab-logo{
+            width: 61.41px;
+            height: 80px;
+        }
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        color: white;
+
+        h2{
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13px;
+            
+            li{
+                display: flex;
+                align-items: center;
+                gap: 8px; 
+
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+                a{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    transition: .5s ease;
+                }
+                a:hover{
+                    color: rgb(36, 227, 36);
+                }
+            }
+        }
+    }
+}
+
+@include responsive(mobile){
+    .footer{
+        padding: 24px;
+        height: 212px;
+    
+        .container{
+            width: 100%;
+            display: grid;
+            gap: 16px;
+            
+            #footer-unilab-logo{
+                width: 46px;
+                height: 60px;
+            }
+        }
+        section{
+            gap: 10px;
+    
+            h2{
+                font-size: 18px;
+            }
+    
+            ul{ 
+                gap: 10px;
+            }
+        }
+    } 
+}

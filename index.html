@@ -3,46 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css links -->
+    <link rel="stylesheet" href="./styles/css/reset.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <title>Chat Box</title>
+    <!-- adding an icon -->
+    <link rel="icon" href="./assets/icons/Group 3.png" type="image/png">
+    <!-- addind alternative icon for older browsers -->
+    <link rel="shortcut icon" href="./assets/icons/Group 3.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>Document</title>
+    <!-- adding meta tags -->
+    <meta name="description" content="Chatbox app for children">
+    <meta name="keywords" content="Chatbox, children, question">
+    <!-- og meta tags -->
+    <meta property="og:title" content="Chat Box">
+    <meta property="og:description" content="Quiz web page for Children">
+    <meta property="og:image" content="./assets/icons/Group 3.png">
+    <meta property="og:url" content=""> 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chat Box">
+    <meta property="og:locale" content="ka_GE">
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summery_large_image">
+    <meta name="twitter:title" content="Chat Box">
+    <meta name="twitter:description" content="Quiz web page for Children">
+    <meta name="twitter:image" content="./assets/icons/Group 3.png">
   </head>
+
+
   <body class="landing-page">
-    <header class="main-header">
-      <div class="container">
+    <header class="header">
         <div class="header-components">
           <!-- Logos -->
           <div class="header-logos">
-            <a href="index.html">
+            <a href="https://iliauni.edu.ge/ge" target="_blank">
               <img
                 src="./assets/logos/iliauni-logo.svg"
                 alt="ilia state university logo"
               />
             </a>
-            <a href="index.html">
-              <img src="./assets/logos/unilab-logo.svg" alt="unilab logo" />
+            <a href="https://unilab.iliauni.edu.ge/" target="_blank">
+              <img 
+                src="./assets/logos/unilab-logo.svg" 
+                alt="unilab logo" 
+                class="unilab-logo"/>
             </a>
           </div>
 
           <!-- Navigation -->
-          <div class="navigation">
-            <nav>
-              <a href="#">პროექტის შესახებ</a>
+          <div>
+            <nav class="navigation">
+              <a href="#about-section" class="desktop">პროექტის შესახებ</a>
+              <a href="#about-section" class="mobile"><img src="./assets/icons/burger-menu.png" alt="burger-menu"></a>
             </nav>
           </div>
         </div>
-      </div>
+
+        <div class="line"></div>
     </header>
+
+
     <main class="main-page">
-      <div class="main-page-wrapper">
+      <section class="hero-section">
         <div class="main-text-container">
           <div>
             <h2>გამარჯობა</h2>
-            <p class="introduction">
-              <span>მე უნა ვარ, </span>
-              <span>ილიას სახელმწიფო </span>
-              <span>უნივერსიტეტის ჩეტბოტი. </span>
+            <p>
+              <p class="introduction">
+                <span>მე უნა ვარ, </span>
+                <span>ილიას სახელმწიფო </span>
+                <span>უნივერსიტეტის ჩეტბოტი. </span>
+              </p>
               <span>მე შემიძლია გემეგობრო და აგრეთვე, </span>
               <span>გიპასუხო ილიაუნისთან დაკავშირებულ </span>
               <span>შეკითხვებზე.</span>
@@ -66,45 +98,61 @@
             </p>
           </div>
         </div>
-        <img src="./assets/main-imgs/camp.webp" alt="camp" class="camp-img" />
+
+        <img src="./assets/main-imgs/Frame 24.png" alt="camp" class="camp-img" />
+
         <div class="img-container">
-          <img
-            class="elipse-img"
-            src="assets/main-imgs/ellipse.webp"
-            alt="elipse"
-          />
           <img
             class="robot-img"
             src="assets/main-imgs/robot.webp"
             alt="robot"
           />
         </div>
-        <div class="chat-functions">
-          <div class="start-chat-btn">ჩატის დაწყება</div>
-          <div class="message-btn">
-            <img src="./assets/icons/chat-icon.svg" alt="chat icon" />
+      </section>
+
+      <section class="chat-section">
+        <div class="start-chat-btn" id="start">ჩატის დაწყება</div>
+
+        <div class="chatbox-container">
+          <iframe
+            id="chatbotIframe"
+            src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=3920&tone=0"
+            frameborder="0">
+          </iframe>
+          <div class="message-btn" id="message-btn">
+            <img src="./assets/icons/chat-icon.svg" alt="chat icon" id="open"/>
+            <img src="./assets/main-imgs/close.png" alt="დახურე"
+            style="display: none;" id="close">
           </div>
         </div>
-        <div class="about-project">
-          <h2>პროექტის შესახებ</h2>
-          <p class="chatbot-description">
-            <span
-              >ჩეტბოტები - რობოტების ერთ-ერთი ნაირსახეობაა. ისინი ადამიანთან
-              მოსაუბრე პროგრამები არიან, რომლებსაც ადამიანის მსგავსად და მათგან
-              დამოუკიდებლად შეუძლიათ დიალოგის წარმართვა.</span
-            >
-            <span
-              >ჩეტბოტების რამდენიმე სახეობა არსებობს. ზოგიერთი მათგანი
-              rule-based არის, ზოგიერთი ხელოვნური ინტელექტითაა შექმნილი, თუმცა
-              ჯერჯერობით ისინი მაინც საჭიროებენ ადამიანის ჩართულობას.
-              თავდაპირველად სწორედ ადამიანი წერს იმ პირველ სიტყვებს, რომლებსაც
-              ახალდაბადებული ჩეტბოტი სამყაროს ეუბნება.
-            </span>
-          </p>
-        </div>
-      </div>
+      </section>
+
+      <section class="about-section" id="about-section">
+        <h2>პროექტის შესახებ</h2>
+        <p class="chatbot-description">
+          <span
+            >ჩეტბოტები - რობოტების ერთ-ერთი ნაირსახეობაა. ისინი ადამიანთან
+            მოსაუბრე პროგრამები არიან, რომლებსაც ადამიანის მსგავსად და მათგან
+            დამოუკიდებლად შეუძლიათ დიალოგის წარმართვა.</span
+          >
+          <span
+            >ჩეტბოტების რამდენიმე სახეობა არსებობს. ზოგიერთი მათგანი
+            rule-based არის, ზოგიერთი ხელოვნური ინტელექტითაა შექმნილი, თუმცა
+            ჯერჯერობით ისინი მაინც საჭიროებენ ადამიანის ჩართულობას.
+            თავდაპირველად სწორედ ადამიანი წერს იმ პირველ სიტყვებს, რომლებსაც
+            ახალდაბადებული ჩეტბოტი სამყაროს ეუბნება.
+          </span>
+        </p>
+      </section>
+
+        <!-- <div class="about-project">
+        </div> -->
     </main>
-    <footer class="main-footer">
+
+
+
+
+    <footer class="footer">
       <div class="container">
         <a href="https://unilab.iliauni.edu.ge/" target="_blank">
           <img
@@ -113,6 +161,8 @@
             alt="unilab logo"
           />
         </a>
+
+
         <section class="footer-contacts-section">
           <h2>კონტაქტი:</h2>
           <ul>
@@ -135,5 +185,7 @@
         </section>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
