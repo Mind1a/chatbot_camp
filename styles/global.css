@@ -53,6 +53,9 @@ html * {
 .header .header-components .header-logos a:hover::before {
   width: 100%;
 }
+.header .header-components .navigation .mobile {
+  display: none;
+}
 .header .header-components .navigation a {
   position: relative;
   color: white;
@@ -84,6 +87,32 @@ html * {
   width: 100%;
 }
 
+@media (max-width: 1440px) {
+  .header {
+    height: 95;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    height: 80px;
+    padding: 16px 24px;
+  }
+  .header .header-components .header-logos {
+    gap: 16px;
+  }
+  .header .header-components .header-logos img {
+    width: 49px;
+  }
+  .header .header-components .header-logos .unilab-logo {
+    width: 36px !important;
+  }
+  .header .header-components .navigation .mobile {
+    display: block;
+  }
+  .header .header-components .navigation .desktop {
+    display: none;
+  }
+}
 .footer {
   padding: 48px 110px;
   width: 100%;
@@ -137,6 +166,30 @@ html * {
   color: rgb(36, 227, 36);
 }
 
+@media (max-width: 480px) {
+  .footer {
+    padding: 24px;
+    height: 212px;
+  }
+  .footer .container {
+    width: 100%;
+    display: grid;
+    gap: 16px;
+  }
+  .footer .container #footer-unilab-logo {
+    width: 46px;
+    height: 60px;
+  }
+  .footer section {
+    gap: 10px;
+  }
+  .footer section h2 {
+    font-size: 18px;
+  }
+  .footer section ul {
+    gap: 10px;
+  }
+}
 .main-page {
   background-color: #122d24;
   color: white;
@@ -222,6 +275,7 @@ html * {
   bottom: -25px;
   right: 72px;
   display: none;
+  z-index: 10;
 }
 .main-page .chat-section .message-btn {
   width: 48px;
@@ -250,7 +304,7 @@ html * {
 .main-page .about-section {
   width: 100%;
   height: auto;
-  margin: 92px 0 154px;
+  margin: 92px 0 0;
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 30px;
@@ -269,4 +323,290 @@ html * {
 }
 .main-page .about-section p span {
   display: block;
+}
+
+@media (max-width: 1440px) {
+  .hero-section {
+    position: relative;
+  }
+  .hero-section .camp-img {
+    margin-block-start: auto;
+    width: 481px;
+    height: 359px;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    transform: translateX(-60%);
+  }
+  .img-container {
+    z-index: 2;
+    width: 394px !important;
+    height: 394px !important;
+  }
+  .img-container img {
+    width: 180px;
+  }
+}
+@media (max-width: 1200px) {
+  .main-page {
+    padding: 150px 90px;
+  }
+  .main-page .hero-section {
+    position: relative;
+  }
+  .main-page .hero-section .main-text-container {
+    width: 650px;
+  }
+  .main-page .hero-section .camp-img {
+    margin-block-start: auto;
+    width: 300px;
+    height: 259px;
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    transform: translateX(-60%);
+  }
+  .main-page .img-container {
+    z-index: 2;
+    width: 344px !important;
+    height: 344px !important;
+  }
+  .main-page .img-container img {
+    width: 170px;
+  }
+}
+@media (max-width: 1024px) {
+  .main-page {
+    padding: 140px 70px;
+  }
+  .main-page .hero-section .main-text-container {
+    width: 550px;
+  }
+  .main-page .hero-section .camp-img {
+    margin-block-start: auto;
+    width: 250px;
+    height: 219px;
+    position: absolute;
+    bottom: 0;
+    left: 90%;
+    transform: translateX(-90%);
+  }
+  .main-page .img-container {
+    z-index: 2;
+    width: 304px !important;
+    height: 304px !important;
+  }
+  .main-page .img-container img {
+    width: 150px;
+  }
+}
+@media (max-width: 900px) {
+  .main-page {
+    padding: 130px 65px;
+  }
+  .main-page .hero-section .main-text-container {
+    width: 450px;
+  }
+  .main-page .hero-section .camp-img {
+    width: 200px;
+    height: 190px;
+    left: 90%;
+    transform: translateX(-90%);
+  }
+  .main-page .img-container {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  .main-page .img-container img {
+    width: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .main-page {
+    padding: 120px 60px;
+  }
+  .main-page .hero-section .main-text-container {
+    width: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .main-page .hero-section .main-text-container .introduction {
+    max-width: 149px;
+    margin-bottom: 16px;
+  }
+  .main-page .hero-section .camp-img {
+    display: none;
+  }
+  .main-page .hero-section .img-container {
+    position: absolute;
+    width: 163px !important;
+    height: 163px !important;
+    top: 16px;
+    right: 16px;
+  }
+  .main-page .hero-section .img-container img {
+    width: 76.48px;
+  }
+  .main-page .chat-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+  }
+  .main-page .chat-section .start-chat-btn {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .main-page .chat-section .chatbox-container #chatbotIframe {
+    position: fixed;
+    bottom: 15%;
+    right: 0;
+    display: none;
+    z-index: 10;
+  }
+  .main-page .chat-section .message-btn {
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    z-index: 1000;
+  }
+  .main-page .about-section {
+    margin: 40px 0 0px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+  .main-page .about-section .chatbot-description {
+    max-width: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .main-page {
+    padding: 110px 30px;
+  }
+  .main-page .hero-section .main-text-container {
+    width: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .main-page .hero-section .main-text-container .introduction {
+    max-width: 149px;
+    margin-bottom: 16px;
+  }
+  .main-page .hero-section .camp-img {
+    display: none;
+  }
+  .main-page .hero-section .img-container {
+    position: absolute;
+    width: 163px !important;
+    height: 163px !important;
+    top: 16px;
+    right: 16px;
+  }
+  .main-page .hero-section .img-container img {
+    width: 76.48px;
+  }
+  .main-page .chat-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+  }
+  .main-page .chat-section .start-chat-btn {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .main-page .chat-section .chatbox-container #chatbotIframe {
+    position: fixed;
+    bottom: 15%;
+    right: 0;
+    display: none;
+    z-index: 10;
+  }
+  .main-page .chat-section .message-btn {
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    z-index: 1000;
+  }
+  .main-page .about-section {
+    margin: 40px 0 0px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+  .main-page .about-section .chatbot-description {
+    max-width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .main-page {
+    padding: 107px 24px;
+  }
+  .main-page .hero-section .main-text-container {
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .main-page .hero-section .main-text-container .introduction {
+    max-width: 149px;
+    margin-bottom: 16px;
+  }
+  .main-page .hero-section .camp-img {
+    display: none;
+  }
+  .main-page .hero-section .img-container {
+    position: absolute;
+    width: 163px !important;
+    height: 163px !important;
+    top: 16px;
+    right: 16px;
+  }
+  .main-page .hero-section .img-container img {
+    width: 76.48px;
+  }
+  .main-page .chat-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+  }
+  .main-page .chat-section .start-chat-btn {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .main-page .chat-section .chatbox-container #chatbotIframe {
+    position: fixed;
+    bottom: 15%;
+    right: 0;
+    display: none;
+    z-index: 10;
+  }
+  .main-page .chat-section .message-btn {
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    z-index: 1000;
+  }
+  .main-page .about-section {
+    margin: 40px 0 0px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+  .main-page .about-section .chatbot-description {
+    max-width: 333px;
+  }
 }/*# sourceMappingURL=global.css.map */
