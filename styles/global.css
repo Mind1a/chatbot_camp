@@ -217,6 +217,7 @@ html * {
 .main-page .hero-section {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .main-page .hero-section .main-text-container {
   width: 718px;
@@ -244,9 +245,12 @@ html * {
   display: block;
 }
 .main-page .hero-section .camp-img {
-  margin-block-start: auto;
+  position: absolute;
+  bottom: 0;
   width: 481px;
   height: 359px;
+  left: 60%;
+  transform: translateX(-60%);
   z-index: 0;
 }
 .main-page .hero-section .img-container {
@@ -257,6 +261,7 @@ html * {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 .main-page .chat-section {
   display: flex;
@@ -323,18 +328,13 @@ html * {
 }
 
 @media (max-width: 1440px) {
-  .hero-section {
-    position: relative;
+  .hero-section .main-text-container {
+    width: 500px;
   }
   .hero-section .camp-img {
-    margin-block-start: auto;
     width: 481px;
     height: 359px;
     z-index: 0;
-    position: absolute;
-    bottom: 0;
-    left: 60%;
-    transform: translateX(-60%);
   }
   .img-container {
     z-index: 2;
@@ -350,18 +350,15 @@ html * {
     padding: 150px 90px;
   }
   .main-page .hero-section {
-    position: relative;
+    align-items: center;
   }
   .main-page .hero-section .main-text-container {
-    width: 650px;
+    width: 530px;
   }
   .main-page .hero-section .camp-img {
     width: 300px;
     height: 259px;
-    position: absolute;
-    bottom: 0;
-    left: 60%;
-    transform: translateX(-60%);
+    bottom: 20%;
   }
   .main-page .img-container {
     z-index: 2;
@@ -377,15 +374,12 @@ html * {
     padding: 140px 70px;
   }
   .main-page .hero-section .main-text-container {
-    width: 550px;
+    width: 490px;
   }
   .main-page .hero-section .camp-img {
     width: 250px;
     height: 219px;
-    position: absolute;
-    bottom: 0;
-    left: 90%;
-    transform: translateX(-90%);
+    bottom: 20%;
   }
   .main-page .img-container {
     z-index: 2;
@@ -401,13 +395,12 @@ html * {
     padding: 130px 65px;
   }
   .main-page .hero-section .main-text-container {
-    width: 450px;
+    width: 420px;
   }
   .main-page .hero-section .camp-img {
     width: 200px;
     height: 190px;
-    left: 90%;
-    transform: translateX(-90%);
+    bottom: 20%;
   }
   .main-page .img-container {
     width: 280px !important;
