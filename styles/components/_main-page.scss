@@ -7,8 +7,7 @@
     .hero-section{
         display: flex;
         justify-content: space-between;
-        
-
+        position: relative;
         .main-text-container{
             width: 718px;
             height: auto;
@@ -38,9 +37,12 @@
         }
 
         .camp-img{
-            margin-block-start: auto;
+            position: absolute;
+            bottom: 0;
             width: 481px;
             height: 359px;
+            left: 60%;
+            transform: translateX(-60%);
             z-index: 0;
         }
 
@@ -52,6 +54,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 2;
         }
     }
 
@@ -75,16 +78,6 @@
             font-size: 18px;
             font-weight: 500;
             cursor: pointer;
-
-            transition: .5s;
-            overflow: hidden;
-        }
-
-        .start-chat-btn:hover{
-            background-color: rgb(36, 227, 36);
-            color: black;
-            box-shadow: 0 0 50px rgb(36, 227, 36);
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
         }
 
         .chatbox-container{
@@ -108,23 +101,6 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-
-            transition: .8s ease;
-            overflow: hidden;
-        }
-
-        .message-btn:hover{
-            background-color: rgb(36, 227, 36);
-            color: black;
-            box-shadow: 0 0 50px rgb(36, 227, 36);
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        }
-
-        .red:hover{
-            background-color: rgb(231, 25, 25);
-            color: black;
-            box-shadow: 0 0 50px rgb(231, 25, 25);
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
         }
     } 
 
@@ -157,16 +133,13 @@
 
 @include responsive(desktop){
     .hero-section{
-        position: relative;
+        .main-text-container{
+            width: 500px;
+        }
         .camp-img{
-            margin-block-start: auto;
             width: 481px;
             height: 359px;
             z-index: 0;
-            position: absolute;
-            bottom: 0;
-            left: 60%;
-            transform: translateX(-60%);
         }
     }
     .img-container{
@@ -184,18 +157,14 @@
     .main-page{
         padding: 150px 90px;
         .hero-section{
+            align-items: center;
             .main-text-container{
-                width: 650px;
+                width: 530px;
             }
-            position: relative;
             .camp-img{
-                margin-block-start: auto;
                 width: 300px;
                 height: 259px;
-                position: absolute;
-                bottom: 0;
-                left: 60%;
-                transform: translateX(-60%);
+                bottom: 20%;
             }
         }
         .img-container{
@@ -215,16 +184,12 @@
         padding: 140px 70px;
         .hero-section{
             .main-text-container{
-                width: 550px;
+                width: 490px;
             }
             .camp-img{
-                margin-block-start: auto;
                 width: 250px;
                 height: 219px;
-                position: absolute;
-                bottom: 0;
-                left: 90%;
-                transform: translateX(-90%);
+                bottom: 20%;
             }
         }
         .img-container{
@@ -244,13 +209,12 @@
         padding: 130px 65px;
         .hero-section{
             .main-text-container{
-                width: 450px;
+                width: 420px;
             }
             .camp-img{
                 width: 200px;
                 height: 190px;
-                left: 90%;
-                transform: translateX(-90%);
+                bottom: 20%;
             }
         }
         .img-container{
@@ -299,16 +263,8 @@
         }
     
         .chat-section{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-top: 40px;
-            position: relative;
-    
             .start-chat-btn{
                 width: 100%;
-                border-radius: 20px;
             }
             .chatbox-container{
                 #chatbotIframe{
@@ -374,16 +330,8 @@
         }
     
         .chat-section{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-top: 40px;
-            position: relative;
-    
             .start-chat-btn{
                 width: 100%;
-                border-radius: 20px;
             }
             .chatbox-container{
                 #chatbotIframe{
@@ -449,16 +397,8 @@
         }
     
         .chat-section{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-top: 40px;
-            position: relative;
-    
             .start-chat-btn{
                 width: 100%;
-                border-radius: 20px;
             }
             .chatbox-container{
                 #chatbotIframe{

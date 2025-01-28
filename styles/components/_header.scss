@@ -21,22 +21,6 @@
         .header-logos a{
             position: relative;
         }
-        .header-logos a::before{
-            content: "";
-            position: absolute;
-            height: 2.5px;
-            width: 0;
-            background-color: rgb(36, 227, 36);
-            transition: .7s ease;
-        }
-        .header-logos a:before{
-            left: 0;
-            bottom: -10px;
-        }
-        .header-logos a:hover::before{
-            width: 100%;
-        }
-
         .navigation{
             .mobile{
                 display: none;
@@ -48,36 +32,47 @@
             font-size: 20px;
             font-weight: 500;
         }
-        .navigation a:before,
-        .navigation a:after{
-            content: "";
-            position: absolute;
-            height: 3px;
-            width: 0;
-            background-color: rgb(36, 227, 36);
-            transition: .7s ease;
-        }
-
-        .navigation a:after{
-            left: 0;
-            bottom: -10px;
-        }
-        .navigation a:before{
-            right: 0;
-            top: -10px;
-        }
-        .navigation a:hover{
-            color: rgb(231, 25, 25);
-        }
-        .navigation a:hover:after,
-        .navigation a:hover:before{
-            width: 100%;
-        }
     }
 }
 @include responsive(desktop){
     .header{
         height: 95;
+    }
+}
+@include responsive(large-laptop){
+    .header{
+        padding: 20px 90px;
+    }
+}
+@include responsive(laptop){
+    .header{
+        padding: 20px 70px;
+    }
+}
+@include responsive(large-tablet){
+    .header{
+        padding: 15px 65px;
+    }
+}
+@include responsive(tablet){
+    .header{
+        height: 90px;
+        padding: 15px 60px;
+    }
+}
+@include responsive(small-tablet){
+    .header{
+        height: 80px;
+        padding: 12px 30px;
+
+        .navigation{
+            .mobile{
+                display: block !important;
+            }
+            .desktop{
+                display: none;
+            }
+        }
     }
 }
 // responsive header
