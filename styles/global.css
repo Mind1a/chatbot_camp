@@ -12,6 +12,12 @@ html body {
   font-family: sans-serif;
   font-family: "Noto Sans Georgian", sans-serif;
   font-variant: tabular-nums;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+html body main {
+  flex: 1;
 }
 html * {
   margin: 0;
@@ -249,7 +255,7 @@ html * {
   bottom: 0;
   width: 481px;
   height: 359px;
-  left: 60%;
+  left: 65%;
   transform: translateX(-60%);
   z-index: 0;
 }
@@ -310,6 +316,7 @@ html * {
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 30px;
+  scroll-margin-top: 120px;
 }
 .main-page .about-section h2 {
   font-size: 20px;
@@ -329,7 +336,7 @@ html * {
 
 @media (max-width: 1440px) {
   .hero-section .main-text-container {
-    width: 500px;
+    width: 610px !important;
   }
   .hero-section .camp-img {
     width: 481px;
@@ -338,8 +345,8 @@ html * {
   }
   .img-container {
     z-index: 2;
-    width: 394px !important;
-    height: 394px !important;
+    width: 370px !important;
+    height: 370px !important;
   }
   .img-container img {
     width: 180px;
@@ -349,21 +356,17 @@ html * {
   .main-page {
     padding: 150px 90px;
   }
-  .main-page .hero-section {
-    align-items: center;
-  }
   .main-page .hero-section .main-text-container {
-    width: 530px;
+    width: 545px !important;
   }
   .main-page .hero-section .camp-img {
     width: 300px;
     height: 259px;
-    bottom: 20%;
   }
   .main-page .img-container {
     z-index: 2;
-    width: 344px !important;
-    height: 344px !important;
+    width: 300px !important;
+    height: 300px !important;
   }
   .main-page .img-container img {
     width: 170px;
@@ -374,17 +377,16 @@ html * {
     padding: 140px 70px;
   }
   .main-page .hero-section .main-text-container {
-    width: 490px;
+    width: 480px !important;
   }
   .main-page .hero-section .camp-img {
     width: 250px;
     height: 219px;
-    bottom: 20%;
   }
   .main-page .img-container {
     z-index: 2;
-    width: 304px !important;
-    height: 304px !important;
+    width: 280px !important;
+    height: 280px !important;
   }
   .main-page .img-container img {
     width: 150px;
@@ -395,12 +397,11 @@ html * {
     padding: 130px 65px;
   }
   .main-page .hero-section .main-text-container {
-    width: 420px;
+    width: 420px !important;
   }
   .main-page .hero-section .camp-img {
     width: 200px;
     height: 190px;
-    bottom: 20%;
   }
   .main-page .img-container {
     width: 280px !important;
@@ -410,12 +411,68 @@ html * {
     width: 140px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .main-page {
-    padding: 120px 60px;
+    padding: 120px 45px;
   }
   .main-page .hero-section .main-text-container {
+    width: 100% !important;
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .main-page .hero-section .main-text-container .introduction {
+    max-width: 149px;
+    margin-bottom: 16px;
+  }
+  .main-page .hero-section .camp-img {
+    top: 30%;
+    width: 100px;
+    height: 78px;
+  }
+  .main-page .hero-section .img-container {
+    position: absolute;
+    width: 220px !important;
+    height: 220px !important;
+    top: 16px;
+    right: 16px;
+  }
+  .main-page .hero-section .img-container img {
+    width: 100.48px;
+  }
+  .main-page .chat-section .start-chat-btn {
     width: 100%;
+  }
+  .main-page .chat-section .chatbox-container #chatbotIframe {
+    position: fixed;
+    bottom: 15%;
+    right: 0;
+    display: none;
+    z-index: 10;
+  }
+  .main-page .chat-section .message-btn {
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    z-index: 1000;
+  }
+  .main-page .about-section {
+    margin: 40px 0 0px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+  .main-page .about-section .chatbot-description {
+    max-width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .main-page {
+    padding: 120px 40px;
+  }
+  .main-page .hero-section .main-text-container {
+    width: 100% !important;
     padding: 16px;
     border-radius: 20px;
     display: flex;
@@ -431,8 +488,8 @@ html * {
   }
   .main-page .hero-section .img-container {
     position: absolute;
-    width: 163px !important;
-    height: 163px !important;
+    width: 180px !important;
+    height: 180px !important;
     top: 16px;
     right: 16px;
   }
