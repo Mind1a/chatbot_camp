@@ -13,6 +13,11 @@ html{
 
         main{
             flex: 1;
+
+            section{
+                max-width: 1920px;
+                margin: 0 auto;
+            }
         }
     }
 
