@@ -9,9 +9,11 @@
     background-color: $header-color;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     .container{
         width: 100%;
+        max-width: 1920px;
         display: flex;
         justify-content: space-between;
         #footer-unilab-logo{
